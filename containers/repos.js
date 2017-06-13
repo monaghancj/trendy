@@ -3,20 +3,13 @@ import { View, Text, ListView } from 'react-native'
 import { wrap } from 'react-native-style-tachyons'
 import Row from '../components/row'
 
-const ds = new ListView.DataSource({rowHasChanged:(r1,r2) => r1 != r2 })
-
-const data = ds.cloneWithRows([
-  {id: 1, name: "Awesome Repo"},
-  {id: 2, name: "Cool Repo"},
-])
-
-const Repos = () => {
+const Repos = (props) => {
   return (
     <ListView
       cls="mt2"
-      dataSource={data}
-      renderRow={ ({id, ...repo}) => {
-        return <Row key={id} id={id} {...repo} />
+      dataSource={props.dataSource}
+      renderRow={ ({objectID, ...repo}) => {
+        return <Row key={objectID} objectID={objectID} {...repo} />
       }}
     />
   )

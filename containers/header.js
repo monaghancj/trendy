@@ -16,10 +16,10 @@ const Header = () => {
           <Octicons name='mark-github' cls="f3 ml2" />
         </TouchableOpacity>
 
-        <Text cls="black f2">I am a header</Text>
+        <Text cls="black f3">Github Trends</Text>
 
-        <Link to='/settings'>
-          <Octicons name="gear" cls='f3 mr2' />
+        <Link to='/bookmarks'>
+          <Octicons name="bookmark" cls='f3 mr2' />
         </Link>
       </View>
     )
